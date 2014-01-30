@@ -24,42 +24,56 @@ public class User implements IUser {
 	{
 		data.put(WISHLIST, new ArrayList<Object>());
 		data.put(SHOPPINGCART, new ArrayList<Object>());
+
 	}
 	
 	@Override
 	public String getLanguage() {
+
 		return (String) data.get(LANG);
+
 	}
 
 	@Override
 	public String getName() {
+
 		return (String) data.get(NAME);
+
 	}
 
 	@Override
 	public List<ProductItem> getWishList() {
+
 		return (List<ProductItem>) data.get(WISHLIST);
+
 	}
 
 	@Override
 	public List<ProductItem> getShoppingCart() {
+
 		return (List<ProductItem>) data.get(SHOPPINGCART);
+
 	}
 
 	@Override
 	public void setLanguage(String language) {
+
 		data.put(LANG,language);
+
 		
 	}
 
 	@Override
 	public void setName(String name) {
+
 		data.put(NAME, name);
+
 		
 	}
 
 	@Override
 	public void addItemToWishList(ProductItem o) {
+
 		((List<ProductItem>) data.get(WISHLIST)).add(o);
 	}
 
@@ -72,12 +86,15 @@ public class User implements IUser {
 	@Override
 	public void removeItemFromWishList(ProductItem o) {
 		((List<ProductItem>) data.get(WISHLIST)).remove(o);
+
 	}
 
 	@Override
 	public void removeItemFromShoppingCart(ProductItem o) {
+
 		((List<ProductItem>) data.get(SHOPPINGCART)).add(o);
 	}
 
 	
+
 }
