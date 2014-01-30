@@ -42,7 +42,8 @@ public class GitLab implements EntryPoint {
 
 
 	private final FlexTable flexTable = new FlexTable();
-	final LoadUsersServiceAsync servicesabcabc = GWT.create(LoadUsersService.class);
+
+	final LoadUsersServiceAsync service = GWT.create(LoadUsersService.class);
 
 
 	/**
@@ -51,7 +52,8 @@ public class GitLab implements EntryPoint {
 	public void onModuleLoad() 
 	{
 		
-		servicesabcabc.getUsers(new AsyncCallback<List<IUser>>(){
+
+		service.getUsers(new AsyncCallback<List<IUser>>(){
 
 			@Override
 			public void onFailure(Throwable caught) {
