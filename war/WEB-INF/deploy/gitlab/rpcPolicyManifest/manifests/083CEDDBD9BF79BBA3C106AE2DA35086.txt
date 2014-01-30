@@ -1,0 +1,2 @@
+serviceClass: ca.ubc.cpsc310.gitlab.client.service.LoadUsersService
+path: C734C143A84373137DA85BB4CA8C4E7D.gwt.rpc
